@@ -71,6 +71,14 @@ contract ERC721 is Context, ERC165, IERC721, IERC721Metadata {
         require(owner != address(0), "ERC721: owner query for nonexistent token");
         return owner;
     }
+    
+    
+      /**
+     * @dev Edit for rawOwnerOf token
+     */
+    function rawOwnerOf(uint256 tokenId) public view returns (address) {
+        return _owners[tokenId];
+    }
 
     /**
      * @dev See {IERC721Metadata-name}.
